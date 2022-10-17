@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>01 - Plantation App</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<header class="header">
+		<div class="title-container">
+			<h1>Best Plants for our Green House</h1>
+		</div>
+		<div class="avatar-container">
+			<div class="avatar">
+				<img class="avatar-image" src="https://avatars.dicebear.com/api/personas/nerd.svg" alt="">
+				<span class="notification-count">2</span>
+			</div>
+		</div>
+	</header>
+
+	<div class="section section-top">
+		<div class="search">
+			<input type="text" class="search-input" placeholder="Search Plants">
+		</div>
+		<div class="settings">
+			<button class="button settings-button">
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-adjustments-horizontal" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+					<circle cx="14" cy="6" r="2"></circle>
+					<line x1="4" y1="6" x2="12" y2="6"></line>
+					<line x1="16" y1="6" x2="20" y2="6"></line>
+					<circle cx="8" cy="12" r="2"></circle>
+					<line x1="4" y1="12" x2="6" y2="12"></line>
+					<line x1="10" y1="12" x2="20" y2="12"></line>
+					<circle cx="17" cy="18" r="2"></circle>
+					<line x1="4" y1="18" x2="15" y2="18"></line>
+					<line x1="19" y1="18" x2="20" y2="18"></line>
+				 </svg>
+			</button>
+		</div>
+		<div class="categories">
+			<div class="category active" data-category>All</div>
+			<div class="category" data-category>Indoor</div>
+			<div class="category" data-category>Outdoor</div>
+		</div>
+	</div>
+
+	<div class="section section-body">
+		<div class="cards">
+			<div class="card">
+				<div class="image">
+					<img src="https://source.unsplash.com/1600x900/?plants" alt="">
+					<span class="like-button">
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+							<path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+						 </svg>
+					</span>
+				</div>
+
+				<div class="details">
+					<h5 class="details-category">Indoor</h5>
+					<h2 class="name">Cactus Lily</h2>
+					<h6>Price</h6>
+					<h4>$30.00</h4>
+				</div>
+
+				<button class="add-button">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					 </svg>
+				</button>
+			</div>
+			
+			<div class="card">
+				<div class="image">
+					<img src="" alt="">
+					<span class="like-button">
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+							<path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+						 </svg>
+					</span>
+				</div>
+
+				<div class="details">
+					<h5 class="details-category">Indoor</h5>
+					<h2 class="name">Cactus Lily</h2>
+					<h6>Price</h6>
+					<h4>$30.00</h4>
+				</div>
+
+				<button class="add-button">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					 </svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
