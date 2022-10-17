@@ -3,8 +3,9 @@
 :root {
 	--color-accent: #01CC8D;
 	--color-dark: #1D1B28;
+	--color-dark-saturated: #8d8d8d;
 
-	--font-size-sm: clamp(0var(--space-1), 0.17vw + 0.76rem, 0.89rem);
+	--font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
 	--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 	--font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
 	--font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
@@ -49,7 +50,7 @@ body {
 	font-size: 1.6rem;
 	height: 100vh;
 	margin: 0;
-	padding: 1rem 0 0 0;
+	padding: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -90,6 +91,7 @@ h1 {
 	height: var(--avatar-size);
 	background-color: #DCDBE1;
 	border-radius: 50%;
+	cursor: pointer;
 }
 
 .avatar-image {
@@ -144,7 +146,7 @@ h1 {
 
 .search-input {
 	all: unset;
-	width: 100%;
+	width: calc(100% - 5rem);
 	height: 5rem;
 	background-color: white;
 	font-size: 1.5rem;
@@ -152,7 +154,7 @@ h1 {
 	border-radius: var(--space-1);
 }
 
-.button {
+.settings-button {
 	all: unset;
 	width: 5rem;
 	height: 5rem;
@@ -193,24 +195,76 @@ h1 {
 
 .cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
     grid-column-gap: var(--space-4);
     grid-row-gap: var(--space-4);
 }
 
 .card {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	background-color: white;
-	border-radius: var(--space-2);
+	border-radius: var(--space-3);
 	padding: 1rem;
+	transition: .3s ease;
+}
+
+.card:hover {
+	transform: translateY(-5px);
 }
 
 .card .image {
 	position: relative;
+	color: white;
 }
 
 .card .image img {
 	width: 100%;
-	border-radius: var(--space-1);
+	min-height: 150px;
+	border-radius: var(--space-2);
+	object-fit: cover;
+}
+
+.like-button {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	cursor: pointer;
+}
+
+.details {
+	margin-top: var(--space-1);
+}
+.details-category, .price-label {
+	color: var(--color-dark-saturated);
+}
+
+.details-name {
+	color: var(--color-dark);
+	margin-bottom: var(--space-1);
+}
+
+.add-button {
+	all: unset;
+	width: 3.2rem;
+	height: 3.2rem;
+	background-color: var(--color-accent);
+	color: white;
+	font-size: var(--font-size-sm);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--radii-round);
+	position: absolute;
+	bottom: 1rem;
+	right: var(--space-2);
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+	.add-button {
+		width: 2.4rem;
+		height: 2.4rem;
+	}
 }
