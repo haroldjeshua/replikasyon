@@ -254,6 +254,7 @@ h1 {
 }
 .details-category, .price-label {
 	color: var(--color-dark-saturated);
+	font-weight: 300;
 }
 
 .details-name {
@@ -391,7 +392,7 @@ body.plant-content-on {
 	position: relative;
 	height: calc(50vh - 5rem);
 	color: white;
-	background-image: url('https://source.unsplash.com/1600x900/?plants');
+	background-image: url('https://source.unsplash.com/1600x900/?small-plants');
 }
 .plant-details::before {
 	content: '';
@@ -401,17 +402,51 @@ body.plant-content-on {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: hsla(0, 0%, 15%, 0.75);
+	background-color: hsla(249, 19%, 13%, 0.85);
 	z-index: 0;
 }
 .plant-details__inner {
 	position: relative;
 	height: 100%;
 	padding: var(--space-2);
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .plant-about {
 	height: 50vh;
-	background-color: var(--color-dark);
-	color: white;
+	background-color: white;
+	color: var(--color-dark);
 	padding: var(--space-2);
+}
+.plant-details__name {
+	font-size: var(--font-size-xxxl);
+	font-weight: 500;
+	margin-bottom: var(--space-3);
+}
+
+.plant-details__label {
+	font-size: var(--font-size-md);
+	font-weight: 300;
+	color: var(--color-dark-saturated);
+	margin-bottom: .5rem;
+}
+
+.plant-details__value {
+	font-size: var(--font-size-lg);
+	font-weight: 400;
+}
+.plant-specs {
+	all: unset;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+	grid-auto-flow: column;
+	grid-auto-columns: minmax(128px, 1fr);
+	gap: var(--space-3);
+	overflow-x: auto;
+}
+
+.plant-spec {
+	all: unset;
+	display: flex;
 }
