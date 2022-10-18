@@ -220,7 +220,6 @@ h1 {
 	grid-column-gap: var(--space-2);
 	grid-row-gap: var(--space-2);
 }
-
 .card {
 	position: relative;
 	display: flex;
@@ -228,13 +227,9 @@ h1 {
 	background-color: white;
 	border-radius: var(--space-3);
 	padding: 1rem;
+	cursor: pointer;
 	transition: .3s ease;
 }
-
-.card:hover {
-	transform: translateY(-5px);
-}
-
 .card .image {
 	position: relative;
 	color: white;
@@ -354,4 +349,69 @@ h1 {
 }
 .navbar-list-item.active {
 	color: var(--color-dark);
+}
+
+.close-button {
+	all: unset;
+    color: white;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	cursor: pointer;
+}
+
+.plant-content {
+	width: 100vw;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: var(--color-dark);
+	z-index: 2;
+	display: none;
+	flex-direction: column;
+}
+
+.plant-content.active {
+	display: flex;
+}
+
+body.plant-content-on {
+	overflow-y: hidden;
+}
+
+.plant-action {
+	height: 5rem;
+}
+
+.plant-details {
+	position: relative;
+	height: calc(50vh - 5rem);
+	color: white;
+	background-image: url('https://source.unsplash.com/1600x900/?plants');
+}
+.plant-details::before {
+	content: '';
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: hsla(0, 0%, 15%, 0.75);
+	z-index: 0;
+}
+.plant-details__inner {
+	position: relative;
+	height: 100%;
+	padding: var(--space-2);
+}
+.plant-about {
+	height: 50vh;
+	background-color: var(--color-dark);
+	color: white;
+	padding: var(--space-2);
 }

@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>01 - Plantation App</title>
 	<link rel="stylesheet" href="main.css">
+	<script defer src="app.js" type="module"></script>
 </head>
 <body>
 	<div class="container">
@@ -50,7 +51,7 @@
 
 		<section class="section section-body">
 			<div class="cards">
-				<div class="card">
+				<div class="card" data-test-card>
 					<div class="image">
 						<img src="https://source.unsplash.com/1600x900/?plants" alt="">
 						<span class="like-button">
@@ -312,6 +313,83 @@
 				</li>
 			</ul>
 		</nav>
+
+		<div class="plant-content" data-plant-content>
+			<div class="plant-action">
+				<button class="close-button" data-close-plant>
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<polyline points="15 6 9 12 15 18"></polyline>
+					 </svg>
+				</button>
+			</div>
+
+			<div class="plant-details">
+				<div class="plant-details__inner">
+					<h1>Cactus Lily</h1>
+
+					<h6>Category</h6>
+					<h5>Indoor</h5>
+
+					<h6>Type</h6>
+					<h5>Small</h5>
+
+					<h6>Plants</h6>
+					<h5>Cactus</h5>
+				</div>
+			</div>
+
+			<div class="plant-about">
+				<h1>About</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quo distinctio, officia ipsam maiores cum. Veritatis commodi aliquid, maiores recusandae nam dolorem provident corporis, iure modi, doloremque consequatur numquam amet dolores accusamus.</p>
+
+				<div class="plant-specs-wrapper">
+					<ul class="plant-specs">
+						<li class="plant-spec">
+							<div class="plant-spec__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-autofit-height" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+									<path d="M12 20h-6a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h6"></path>
+									<path d="M18 14v7"></path>
+									<path d="M18 3v7"></path>
+									<path d="M15 18l3 3l3 -3"></path>
+									<path d="M15 6l3 -3l3 3"></path>
+								 </svg>
+							</div>
+							<div class="plant-spec__label">Height</div>
+							<div class="plant-spec__value">5.5"</div>
+						</li>
+						<li class="plant-spec">
+							<div class="plant-spec__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-autofit-width" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+									<path d="M4 12v-6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v6"></path>
+									<path d="M10 18h-7"></path>
+									<path d="M21 18h-7"></path>
+									<path d="M6 15l-3 3l3 3"></path>
+									<path d="M18 15l3 3l-3 3"></path>
+								 </svg>
+							</div>
+							<div class="plant-spec__label">Diameter</div>
+							<div class="plant-spec__value">3.2"</div>
+						</li>
+						<li class="plant-spec">
+							<div class="plant-spec__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-droplet-filled-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+									<path d="M6.8 11a6 6 0 1 0 10.396 0l-5.197 -8l-5.2 8z"></path>
+									<path d="M6 14h12"></path>
+									<path d="M7.305 17.695l3.695 -3.695"></path>
+									<path d="M10.26 19.74l5.74 -5.74l-5.74 5.74z"></path>
+								 </svg>
+							</div>
+							<div class="plant-spec__label">Humidity</div>
+							<div class="plant-spec__value">1.2"</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
