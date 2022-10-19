@@ -1,0 +1,24 @@
+{
+  "name": "replikasyon",
+  "version": "1.0.0",
+  "description": "Replicates of the designs I found on the web (and maybe some of my own) and building it on the frontend side.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haroldjeshua/replikasyon.git"
+  },
+  "keywords": [
+    "replicate",
+    "test",
+    "mockup"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haroldjeshua/replikasyon/issues"
+  },
+  "homepage": "https://github.com/haroldjeshua/replikasyon#readme"
+}
