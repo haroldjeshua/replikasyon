@@ -119,7 +119,7 @@ h4 {
 	padding: clamp(4px, 4vw, 16px);
 	border-radius: var(--radii-3);
 	cursor: pointer;
-	transition: .3s ease-in-out .3s;
+	transition: 300ms ease-in-out 250ms;
 }
 
 .card:nth-child(odd):hover {
@@ -133,9 +133,20 @@ h4 {
 	position: absolute;
 	top: var(--space-1);
 	right: var(--space-1);
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	width: 2.4rem;
+	height: 2.4rem;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	transition: .3s ease;
 }
-
-
+.card:hover .card-link {
+	border: 2px solid;
+	transform: rotate(45deg);
+}
 a,
 a:link,
 a:visited {
