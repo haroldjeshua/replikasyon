@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap');
 
 :root {
-    --color-main: hsl(268, 92%, 28%);
+	--color-main: hsl(268, 92%, 28%);
 
-    --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+	--bg-mesh: radial-gradient(at 65% 84%, hsla(163,74%,60%,1) 0px, transparent 50%),
+	radial-gradient(at 4% 32%, hsla(252,71%,67%,1) 0px, transparent 50%),
+	radial-gradient(at 99% 89%, hsla(220,81%,69%,1) 0px, transparent 50%),
+	radial-gradient(at 9% 55%, hsla(52,81%,62%,1) 0px, transparent 50%),
+	radial-gradient(at 11% 94%, hsla(9,82%,62%,1) 0px, transparent 50%),
+	radial-gradient(at 91% 18%, hsla(227,91%,61%,1) 0px, transparent 50%),
+	radial-gradient(at 19% 91%, hsla(114,63%,68%,1) 0px, transparent 50%);
+
+	--font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
 	--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 	--font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
 	--font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
 	--font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
 	--font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
 	--font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
-    --font-size-display: clamp(6rem, 6.9vw + 4.20rem, 7rem);
+	--font-size-display: clamp(6rem, 6.9vw + 4.20rem, 7rem);
 
 	--space-1: 8px;
 	--space-2: 16px;
@@ -34,33 +42,26 @@
 }
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 html {
-    font-size: 10px;
+	font-size: 10px;
 }
 body {
 	font-family: "Space Grotesk", sans-serif;
 	font-size: 1.6rem;
 	margin: 0;
 	padding: 0;
-    min-height: 100vh;
-    background-color:#c599ff;
-    background-image:
-        radial-gradient(at 65% 84%, hsla(163,74%,60%,1) 0px, transparent 50%),
-        radial-gradient(at 4% 32%, hsla(252,71%,67%,1) 0px, transparent 50%),
-        radial-gradient(at 99% 89%, hsla(220,81%,69%,1) 0px, transparent 50%),
-        radial-gradient(at 9% 55%, hsla(52,81%,62%,1) 0px, transparent 50%),
-        radial-gradient(at 11% 94%, hsla(9,82%,62%,1) 0px, transparent 50%),
-        radial-gradient(at 91% 18%, hsla(227,91%,61%,1) 0px, transparent 50%),
-        radial-gradient(at 19% 91%, hsla(114,63%,68%,1) 0px, transparent 50%);
-    }
+	min-height: 100vh;
+	background-color:#c599ff;
+	background-image: var(--bg-mesh)
+}
 
 h1, h2, h3, h4, h5, h6 {
-    all: unset;
+	all: unset;
 	margin: 0;
-    font-weight: 400;
-    line-height: 1.1;
+	font-weight: 400;
+	line-height: 1.1;
 }
 
 h1 {
@@ -68,63 +69,76 @@ h1 {
 }
 
 h2 {
-    font-size: var(--font-size-xxl);
+	font-size: var(--font-size-xxl);
 }
 
 h3 {
-    font-size: var(--font-size-xl);
+	font-size: var(--font-size-xl);
 }
 
 h4 {
-    font-size: var(--font-size-lg);
+	font-size: var(--font-size-lg);
 }
 
 .font-display {
-    font-size: var(--font-size-display);
+	font-size: var(--font-size-display);
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    padding: var(--space-2);
+	background-color: hsla(0, 0%, 100%, 0.075);
+	backdrop-filter: blur(16px);
+	position: sticky;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	margin: auto;
+	padding: var(--space-2);
+	z-index: 1;
 }
 
 .content {
-    padding: var(--space-3);
+	padding: var(--space-3);
 }
 .cards {
-    display: grid;
+	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
 	gap: 2rem;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(16px);
-    min-height: 20rem;
-    padding: clamp(4px, 4vw, 16px);
-    border-radius: var(--radii-3);
-    cursor: pointer;
-    transition: .3s ease;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.25);
+	backdrop-filter: blur(16px);
+	min-height: 20rem;
+	padding: clamp(4px, 4vw, 16px);
+	border-radius: var(--radii-3);
+	cursor: pointer;
+	transition: .3s ease-in-out .3s;
 }
 
 .card:nth-child(odd):hover {
-    transform: rotate3d(1, 1, 1, 5deg);
+	transform: rotate3d(1, 1, 1, 5deg);
 }
 .card:nth-child(even):hover {
-    transform: rotate3d(1, 1, 1, -5deg);
+	transform: rotate3d(1, 1, 1, -5deg);
 }
 
-.card a,
-.card a:link,
-.card a:visited {
-    all: unset;
+.card-link {
+	position: absolute;
+	top: var(--space-1);
+	right: var(--space-1);
+}
+
+
+a,
+a:link,
+a:visited {
+	all: unset;
+	cursor: pointer;
 }
