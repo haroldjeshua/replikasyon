@@ -153,6 +153,7 @@ a:visited {
 	all: unset;
 	cursor: pointer;
 }
+/* manually selecting child */
 /* .card:nth-child(2) {
 	transition-delay: 200ms;
 }
@@ -174,6 +175,7 @@ a:visited {
 .card:nth-child(8) {
 	transition-delay: 800ms;
 } */
+/* custom variable dynamic child selection */
 .cards .card {
 	transition-delay: calc(var(--order) * 200ms);
 }
