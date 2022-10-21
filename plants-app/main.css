@@ -375,12 +375,17 @@ h1 {
 	left: 0;
 	background-color: var(--color-dark);
 	z-index: 2;
-	display: none;
+	/* display: none; */
 	flex-direction: column;
+	opacity: 0;
+	transform: translateY(100%);
+	transition: .3s ease;
 }
 
 .plant-content.active {
 	display: flex;
+	opacity: 1;
+	transform: translateY(0);    
 }
 
 body.plant-content-on {
@@ -450,6 +455,7 @@ body.plant-content-on {
 	grid-auto-columns: minmax(128px, 1fr);
 	gap: var(--space-3);
 	overflow-x: auto;
+	overflow-y: hidden;
 }
 
 .plant-spec {
@@ -475,7 +481,7 @@ body.plant-content-on {
     justify-content: space-around;
     align-content: center;
 	position: absolute;
-    bottom: var(--space-2);
+    bottom: 0;
     left: 0;
     width: 100%;
 	gap: var(--space-1);

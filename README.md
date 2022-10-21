@@ -7,3 +7,5 @@ Replicates of the designs I found on the web (and maybe some of my own) and buil
 2. Apartment Rental Website: https://www.instagram.com/p/CXDtSABA3s1/?utm_source=ig_web_copy_link
 
 3. Music Dashboard: https://www.instagram.com/p/CZtMX7vtvba/?utm_source=ig_web_copy_link
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/06965e5a-a5cf-4c3d-b9af-6d45a3253ad7/deploy-status)](https://app.netlify.com/sites/replikasyon/deploys)
