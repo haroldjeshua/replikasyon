@@ -475,7 +475,32 @@ body.plant-content-on {
     justify-content: space-around;
     align-content: center;
 	position: absolute;
-    bottom: 0;
+    bottom: var(--space-2);
     left: 0;
     width: 100%;
+	gap: var(--space-1);
+	padding: var(--space-1);
+}
+
+.plant-summary > div {
+	display: flex;
+}
+.plant-summary > div:first-child {
+	flex-direction: column;
+}
+.plant-summary h5 {
+	color: var(--color-dark-saturated);
+	font-weight: 400;
+}
+.plant-summary h2 span {
+	font-size: small;
+    vertical-align: text-top;
+}
+.checkout-button {
+	all: unset;
+	background-color: var(--color-accent);
+	color: white;
+	padding: var(--space-2);
+	border-radius: var(--radii-5);
+	cursor: pointer;
 }
