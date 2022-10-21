@@ -417,10 +417,13 @@ body.plant-content-on {
     justify-content: space-between;
 }
 .plant-about {
+	position: relative;
 	height: 50vh;
 	background-color: white;
 	color: var(--color-dark);
 	padding: var(--space-2);
+	border-top-left-radius: var(--radii-4);
+	border-top-right-radius: var(--radii-4);
 }
 .plant-details__name {
 	font-size: var(--font-size-xxxl);
@@ -462,4 +465,17 @@ body.plant-content-on {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.plant-summary {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
