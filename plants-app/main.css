@@ -63,6 +63,10 @@ h1 {
 	font-size: var(--font-size-xl);
 }
 
+p {
+	font-size: var(--font-size-md);
+}
+
 .container {
 	padding-bottom: 7.5rem;	
 }
@@ -216,9 +220,10 @@ h1 {
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 	grid-auto-flow: column;
 	grid-auto-columns: minmax(200px, 1fr);
-	overflow-x: auto;
 	grid-column-gap: var(--space-2);
 	grid-row-gap: var(--space-2);
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
 }
 .card {
 	position: relative;
@@ -229,6 +234,7 @@ h1 {
 	padding: 1rem;
 	cursor: pointer;
 	transition: .3s ease;
+	scroll-snap-align: center;
 }
 .card .image {
 	position: relative;
@@ -456,11 +462,13 @@ body.plant-content-on {
 	gap: var(--space-3);
 	overflow-x: auto;
 	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
 }
 
 .plant-spec {
 	all: unset;
 	display: flex;
+	scroll-snap-align: center;
 }
 .plant-spec__icon {
 	width: 5rem;
