@@ -9,7 +9,7 @@
     @apply font-sans text-slate-800;
   }
   .layout {
-    @apply max-w-screen-tb w-screen h-screen m-auto;
+    @apply max-w-screen-md w-screen h-screen m-auto xs:max-w-screen-xs sm:max-w-screen-sm tb:max-w-screen-tb lg:max-w-screen-lg;
   }
   .header {
     @apply w-[100%] h-[4rem] flex flex-row items-center justify-around;
@@ -34,10 +34,18 @@
   }
 
   .hero {
-    @apply flex flex-1 w-[100%] h-[calc(100%-4rem)];
+    @apply flex w-[100%] h-[calc(100%-4rem)];
   }
 
   .hero-text {
-    @apply flex flex-col items-start justify-center;
+    @apply flex flex-col items-start justify-center flex-[1] gap-4;
+  }
+
+  .hero .btn {
+    @apply flex items-center justify-center w-[50%] h-12 bg-gradient-to-r from-violet-700 to-rose-700 text-slate-100 rounded-full hover:opacity-75 transition ease-out;
+  }
+
+  .hero-slider {
+    @apply flex flex-[2];
   }
 }

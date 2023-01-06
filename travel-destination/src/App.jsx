@@ -23,7 +23,7 @@ function App() {
           <h1 className="font-display text-5xl">
             Discover the World, One Trip at a Time
           </h1>
-          <p className="font-sans text-xl mt-4">
+          <p className="font-sans text-xl">
             From mountain retreats to tropical paradises, we'll help you plan
             the trip of a lifetime
           </p>
