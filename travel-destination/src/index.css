@@ -34,7 +34,7 @@
   }
 
   .hero {
-    @apply flex w-[100%] h-[calc(100%-4rem)];
+    @apply flex w-[100%] h-[calc(100%-4rem)] gap-8;
   }
 
   .hero-text {
@@ -45,11 +45,19 @@
     @apply flex items-center justify-center w-[50%] h-12 bg-gradient-to-r from-violet-700 to-rose-700 text-slate-100 rounded-full hover:opacity-75 transition ease-out;
   }
 
-  .hero-slider {
-    @apply flex flex-[2];
-  }
-
   .hero-links {
     @apply flex gap-8 absolute bottom-4;
+  }
+
+  .hero-slider {
+    @apply flex flex-[2] flex-col;
+  }
+
+  .hero-slider__items {
+    @apply grid grid-cols-1 tb:grid-cols-3 gap-4 w-[100%];
+  }
+
+  .hero-slider__item {
+    @apply flex flex-col justify-end;
   }
 }

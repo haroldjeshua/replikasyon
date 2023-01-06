@@ -1,14 +1,27 @@
-import { FiFacebook, FiYoutube, FiInstagram } from "react-icons/fi";
+import {
+  FiFacebook,
+  FiYoutube,
+  FiInstagram,
+  FiMapPin,
+  FiArrowLeftCircle,
+  FiArrowRightCircle,
+} from "react-icons/fi";
 
 const places = [
   {
     url: "https://images.unsplash.com/photo-1569530593440-e48dc137f7d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+    name: "Cappadocia",
+    country: "Turkey",
   },
   {
     url: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    name: "Santorini",
+    country: "Greece",
   },
   {
     url: "https://images.unsplash.com/photo-1616484173745-07f25fd0547f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1527&q=80",
+    name: "Bali",
+    country: "Indonesia",
   },
 ];
 
@@ -52,8 +65,8 @@ function App() {
         </div>
 
         <div className="hero-slider">
-          <div className="hero-slider__group">
-            <div className="hero-slider__group-item">
+          <div className="hero-slider__items">
+            {/* <div className="hero-slider__group-item">
               <h2>Cappadocia</h2>
               <div>
                 <span>[]</span> Turkey
@@ -70,6 +83,25 @@ function App() {
               <div>
                 <span>[]</span> Indonesia
               </div>
+            </div> */}
+            {places.map((place, placeIndex) => (
+              <div className="hero-slider__item" key={placeIndex}>
+                <h2>{place.name}</h2>
+                <div>
+                  <span>
+                    <FiMapPin />
+                  </span>
+                  {place.country}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="hero-slider__footer">
+            <div className="hero-slider__footer-left">unique selection</div>
+            <div className="hero-slider__footer-center">01/01</div>
+            <div className="hero-slider__footer-right">
+              <FiArrowLeftCircle />
+              <FiArrowRightCircle />
             </div>
           </div>
         </div>
