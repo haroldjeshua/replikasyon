@@ -47,10 +47,10 @@ function App() {
 
       <section className="hero">
         <div className="hero-text">
-          <h1 className="font-display text-5xl">
+          <h1 className="font-display text-2xl tb:text-5xl">
             Discover the World, One Trip at a Time
           </h1>
-          <p className="font-sans text-xl">
+          <p className="font-sans text-md md:text-xl">
             From mountain retreats to tropical paradises, we'll help you plan
             the trip of a lifetime
           </p>
@@ -68,12 +68,22 @@ function App() {
           <div className="hero-slider__items">
             {places.map((place, placeIndex) => (
               <div className="hero-slider__item" key={placeIndex}>
-                <h2>{place.name}</h2>
-                <div className="flex items-center justify-start gap-3">
-                  <span>
-                    <FiMapPin />
-                  </span>
-                  {place.country}
+                <picture>
+                  <img
+                    src={place.url}
+                    alt={`${place.name}, ${place.country}`}
+                  />
+                </picture>
+                <div className="hero-slider__text">
+                  <h2 className="text-xl md:text-2xl font-semibold">
+                    {place.name}
+                  </h2>
+                  <div className="flex items-center justify-start gap-2 text-xs uppercase">
+                    <span>
+                      <FiMapPin color="#e11d48" />
+                    </span>
+                    {place.country}
+                  </div>
                 </div>
               </div>
             ))}
@@ -82,8 +92,8 @@ function App() {
             <div className="hero-slider__footer-left">unique selection</div>
             <div className="hero-slider__footer-center">01/01</div>
             <div className="hero-slider__footer-right">
-              <FiArrowLeftCircle />
-              <FiArrowRightCircle />
+              <FiArrowLeftCircle size={32} />
+              <FiArrowRightCircle size={32} />
             </div>
           </div>
         </div>
