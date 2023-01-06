@@ -18,7 +18,9 @@ function App() {
 
       <section className="hero">
         <div className="hero-text">
-          <h1 className="display-1">Discover the World, One Trip at a Time</h1>
+          <h1 className="display-1 font-display">
+            Discover the World, One Trip at a Time
+          </h1>
           <p className="subtitle">
             From mountain retreats to tropical paradises, we'll help you plan
             the trip of a lifetime
