@@ -6,23 +6,38 @@
 
 @layer components {
   body {
-    @apply font-sans;
+    @apply font-sans text-slate-800;
   }
   .layout {
-    @apply max-w-lg w-screen h-screen;
+    @apply max-w-screen-tb w-screen h-screen m-auto;
   }
   .header {
-    @apply w-screen h-[4rem] flex flex-row items-center justify-around;
+    @apply w-[100%] h-[4rem] flex flex-row items-center justify-around;
   }
 
   .header div {
-    @apply h-[100%] flex items-center justify-start flex-1;
+    @apply h-[100%] flex items-center flex-1;
+  }
+
+  .header-left {
+    @apply justify-start;
+  }
+  .header-center {
+    @apply justify-center;
   }
   .header-links {
-    @apply flex flex-row flex-1 gap-8 justify-center;
+    @apply flex flex-row flex-1 gap-8 justify-end;
   }
 
   .header-links li {
     @apply font-semibold uppercase text-sm;
+  }
+
+  .hero {
+    @apply flex flex-1 w-[100%] h-[calc(100%-4rem)];
+  }
+
+  .hero-text {
+    @apply flex flex-col items-start justify-center;
   }
 }

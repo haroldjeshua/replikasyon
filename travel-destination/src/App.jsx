@@ -20,17 +20,38 @@ function App() {
 
       <section className="hero">
         <div className="hero-text">
-          <h1 className="display-1 font-display">
+          <h1 className="font-display text-5xl">
             Discover the World, One Trip at a Time
           </h1>
-          <p className="subtitle">
+          <p className="font-sans text-xl mt-4">
             From mountain retreats to tropical paradises, we'll help you plan
             the trip of a lifetime
           </p>
 
           <button className="btn">Explore</button>
         </div>
-        <div className="hero-slider"></div>
+        <div className="hero-slider">
+          <div className="hero-slider__group">
+            <div className="hero-slider__group-item">
+              <h2>Cappadocia</h2>
+              <div>
+                <span>[]</span> Turkey
+              </div>
+            </div>
+            <div className="hero-slider__group-item">
+              <h2>Santorini</h2>
+              <div>
+                <span>[]</span> Greece
+              </div>
+            </div>
+            <div className="hero-slider__group-item">
+              <h2>Bali</h2>
+              <div>
+                <span>[]</span> Indonesia
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
