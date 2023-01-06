@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&family=Unbounded:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&family=Unbounded:wght@200;400;600;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -13,5 +13,16 @@
   }
   .header {
     @apply w-screen h-[4rem] flex flex-row items-center justify-around;
+  }
+
+  .header div {
+    @apply h-[100%] flex items-center justify-start flex-1;
+  }
+  .header-links {
+    @apply flex flex-row flex-1 gap-8 justify-center;
+  }
+
+  .header-links li {
+    @apply font-semibold uppercase text-sm;
   }
 }

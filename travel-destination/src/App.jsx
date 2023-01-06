@@ -3,13 +3,15 @@ function App() {
     <div className="layout">
       <header className="header">
         <div className="header-left">
-          <h4 className="text-2xl font-bold">travel.</h4>
+          <h4 className="text-2xl font-extrabold">travel.</h4>
         </div>
         <div className="header-center">
-          <h6 className="text-[12px]">Adventure Awaits</h6>
+          <h6 className="text-[12px] uppercase tracking-wider">
+            Adventure Awaits
+          </h6>
         </div>
         <div className="header-right">
-          <ul>
+          <ul className="header-links">
             <li>About</li>
             <li>Contact</li>
           </ul>
