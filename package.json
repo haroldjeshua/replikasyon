@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/haroldjeshua/replikasyon/issues"
   },
-  "homepage": "https://github.com/haroldjeshua/replikasyon#readme"
+  "homepage": "https://github.com/haroldjeshua/replikasyon#readme",
+  "dependencies": {
+    "react-icons": "^4.7.1"
+  }
 }

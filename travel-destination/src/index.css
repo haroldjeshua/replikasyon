@@ -38,7 +38,7 @@
   }
 
   .hero-text {
-    @apply flex flex-col items-start justify-center flex-[1] gap-4;
+    @apply flex flex-col items-start justify-center flex-[1] gap-4 relative;
   }
 
   .hero .btn {
@@ -47,5 +47,9 @@
 
   .hero-slider {
     @apply flex flex-[2];
+  }
+
+  .hero-links {
+    @apply flex gap-8 absolute bottom-4;
   }
 }

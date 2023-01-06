@@ -1,3 +1,17 @@
+import { FiFacebook, FiYoutube, FiInstagram } from "react-icons/fi";
+
+const places = [
+  {
+    url: "https://images.unsplash.com/photo-1569530593440-e48dc137f7d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1616484173745-07f25fd0547f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1527&q=80",
+  },
+];
+
 function App() {
   return (
     <div className="layout">
@@ -29,7 +43,14 @@ function App() {
           </p>
 
           <button className="btn">Explore</button>
+
+          <div className="hero-links">
+            <FiFacebook />
+            <FiYoutube />
+            <FiInstagram />
+          </div>
         </div>
+
         <div className="hero-slider">
           <div className="hero-slider__group">
             <div className="hero-slider__group-item">
