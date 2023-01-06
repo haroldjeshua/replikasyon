@@ -4,9 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #9999ff;
+  background-image: radial-gradient(
+      at 81% 25%,
+      hsla(338, 92%, 61%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 3% 16%, hsla(4, 88%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 76% 51%, hsla(269, 80%, 63%, 1) 0px, transparent 50%),
+    radial-gradient(at 56% 62%, hsla(20, 85%, 62%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 13%, hsla(215, 92%, 75%, 1) 0px, transparent 50%),
+    radial-gradient(at 85% 18%, hsla(148, 87%, 69%, 1) 0px, transparent 50%),
+    radial-gradient(at 64% 37%, hsla(343, 88%, 66%, 1) 0px, transparent 50%);
+}
+
 @layer components {
-  body {
-    @apply font-sans text-slate-800;
+  #root {
+    @apply font-sans bg-slate-100/50 text-slate-800;
   }
   .layout {
     @apply max-w-screen-md w-screen h-screen m-auto xs:max-w-screen-xs sm:max-w-screen-sm tb:max-w-screen-tb lg:max-w-screen-lg;
@@ -50,7 +65,7 @@
   }
 
   .hero-slider {
-    @apply flex flex-[2] flex-col;
+    @apply flex flex-[2] flex-col justify-between relative;
   }
 
   .hero-slider__items {
@@ -59,5 +74,9 @@
 
   .hero-slider__item {
     @apply flex flex-col justify-end;
+  }
+
+  .hero-slider__footer {
+    @apply flex justify-between;
   }
 }

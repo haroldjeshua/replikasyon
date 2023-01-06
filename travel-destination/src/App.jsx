@@ -66,28 +66,10 @@ function App() {
 
         <div className="hero-slider">
           <div className="hero-slider__items">
-            {/* <div className="hero-slider__group-item">
-              <h2>Cappadocia</h2>
-              <div>
-                <span>[]</span> Turkey
-              </div>
-            </div>
-            <div className="hero-slider__group-item">
-              <h2>Santorini</h2>
-              <div>
-                <span>[]</span> Greece
-              </div>
-            </div>
-            <div className="hero-slider__group-item">
-              <h2>Bali</h2>
-              <div>
-                <span>[]</span> Indonesia
-              </div>
-            </div> */}
             {places.map((place, placeIndex) => (
               <div className="hero-slider__item" key={placeIndex}>
                 <h2>{place.name}</h2>
-                <div>
+                <div className="flex items-center justify-start gap-3">
                   <span>
                     <FiMapPin />
                   </span>
